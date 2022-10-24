@@ -1,0 +1,29 @@
+.pagination__ul__list {
+  width: 1429px;
+
+  display: flex;
+  padding: 12px;
+  position: relative;
+  top: 4px;
+  list-style-type: none;
+  justify-content: space-around;
+
+  &__li__item {
+    font-size: 25px;
+    width: 29px;
+    margin: 6px;
+    padding-left: 2px;
+    color: black;
+    box-shadow: 0px 0px 1px 2px lime;
+
+    &:hover {
+      transition: all 1s ease;
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      background-color: lime;
+      color: white;
+    }
+  }
+}

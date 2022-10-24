@@ -23,32 +23,7 @@ const index = () => {
         <select
           className="section__first__select"
           onChange={(e) => {
-            if (e.target.value === "Asia") {
-              selectData("Asia");
-            }
-            if (e.target.value === "Europe") {
-              selectData("Europe");
-            }
-            if (e.target.value === "Africa") {
-              selectData("Africa");
-            }
-            if (e.target.value === "Oceania") {
-              selectData("Oceania");
-            }
-            if (e.target.value === "Americas") {
-              selectData("Americas");
-            }
-
-            if (e.target.value === "Polar") {
-              selectData("Polar");
-            }
-            if (e.target.value === "Antarctic") {
-              selectData("Antarctic");
-            }
-
-            if (e.target.value === "Antarctic Ocean") {
-              selectData("Antarctic Ocean");
-            }
+            selectData(e.target.value);
           }}
         >
           <option disabled selected value={""}>
