@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import "./card.scss";
 import context from "../../context";
 
@@ -9,7 +10,7 @@ const Card = ({ data: { name, region, population, capital, flags } }) => {
 
   return (
     <>
-      <div className="card">
+      <Link to={`/modal/${name}`} className="card">
         <img src={flags.png} alt="flags" className="card__image" />
         <h1 className="card__title">{name}</h1>
         <p className="card__text__first">
@@ -21,7 +22,7 @@ const Card = ({ data: { name, region, population, capital, flags } }) => {
         <p className="card__text__third">
           {t.Capital}: {capital}
         </p>
-      </div>
+      </Link>
     </>
   );
 };

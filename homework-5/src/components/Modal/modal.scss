@@ -1,0 +1,87 @@
+.countries__modal {
+  margin-left: 99px;
+  background-color: rgb(212, 219, 212);
+  width: 1290px;
+  height: 690px;
+  display: flex;
+  position: relative;
+  top: 20px;
+
+  &__back {
+    position: relative;
+    left: 150px;
+    top: 50px;
+    width: 120px;
+    height: 42px;
+    background-color: red;
+    color: white;
+  }
+
+  &__wrap__fourth {
+    position: relative;
+    width: 560px;
+    left: 80px;
+    top: 159px;
+
+    &__image {
+      position: relative;
+      width: 560px;
+      height: 401px;
+    }
+  }
+
+  &__wrap__first {
+    width: 212px;
+    position: relative;
+    left: 100px;
+
+    top: 199px;
+
+    &__text__first {
+      width: 207px;
+    }
+
+    &__text__second {
+      width: 207px;
+    }
+
+    &__text__third {
+      width: 207px;
+    }
+
+    &__text__fourth {
+      width: 207px;
+    }
+
+    &__title {
+      font-family: "Nunito Sans";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 32px;
+      position: relative;
+      line-height: 44px;
+      left: 22px;
+      width: 124px;
+      color: #111517;
+    }
+  }
+
+  &__wrap__second {
+    width: 359px;
+    position: relative;
+    left: 350px;
+    top: -29px;
+
+    &__text__first {
+      width: 349px;
+    }
+    &__text__second {
+      width: 349px;
+    }
+    &__text__third {
+      width: 349px;
+    }
+  }
+
+  
+}

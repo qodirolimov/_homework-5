@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Section_first from "./components/Section_first";
 import context from "./context";
@@ -8,6 +9,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import language from "./lang/language";
 import Pagination from "./components/Pagination";
+import Modal from "./components/Modal";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -64,7 +66,6 @@ const App = () => {
 
   useEffect(() => {
     getAllData();
-    
   }, []);
 
   const paginate = (id) => {
@@ -88,18 +89,27 @@ const App = () => {
         <Navbar data={language} lang={lang} setlang={setLang} />
         <Section_first />
         <main>
-          <div className="main_container">
-            <div className="section__second">
-              {loading ? (
-                lastData.map((item) => {
-                  return <Card key={item.name} data={item} />;
-                })
-              ) : (
-                <Loading />
-              )}
-            </div>
-            <Pagination />
-          </div>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <div className="main_container">
+                  <div className="section__second">
+                    {loading ? (
+                      lastData.map((item) => {
+                        return <Card key={item.name} data={item} />;
+                      })
+                    ) : (
+                      <Loading />
+                    )}
+                  </div>
+                  <Pagination />
+                </div>
+              }
+            />
+
+            <Route path="/modal/:name" element={<Modal />} />
+          </Routes>
         </main>
       </context.Provider>
       <ToastContainer />
